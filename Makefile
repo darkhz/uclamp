@@ -1397,6 +1397,7 @@ headers_install: __headers
 	$(Q)$(MAKE) $(hdr-inst)=include/uapi dst=include
 	$(Q)$(MAKE) $(hdr-inst)=arch/$(hdr-arch)/include/uapi $(hdr-dst)
 	$(Q)$(MAKE) $(hdr-inst)=techpack/audio/include/uapi dst=techpack/audio/include
+	$(Q)$(MAKE) $(hdr-inst)=techpack/audio/4.0/include/uapi dst=techpack/audio/4.0/include
 
 PHONY += headers_check_all
 headers_check_all: headers_install_all
@@ -1407,6 +1408,7 @@ headers_check: headers_install
 	$(Q)$(MAKE) $(hdr-inst)=include/uapi dst=include HDRCHECK=1
 	$(Q)$(MAKE) $(hdr-inst)=arch/$(hdr-arch)/include/uapi $(hdr-dst) HDRCHECK=1
 	$(Q)$(MAKE) $(hdr-inst)=techpack/audio/include/uapi dst=techpack/audio/include HDRCHECK=1
+	$(Q)$(MAKE) $(hdr-inst)=techpack/audio/4.0/include/uapi dst=techpack/audio/4.0/include HDRCHECK=1
 
 # ---------------------------------------------------------------------------
 # Kernel selftest
