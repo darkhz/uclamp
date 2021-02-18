@@ -1,7 +1,8 @@
 #!/system/bin/sh
 
 #Uclamp tuning
-sysctl -w kernel.sched_util_clamp_min_rt_default=500
+sysctl -w kernel.sched_util_clamp_min_rt_default=96
+sysctl -w kernel.sched_util_clamp_min=128
 
 #top-app
 echo max > /dev/cpuset/top-app/uclamp.max
